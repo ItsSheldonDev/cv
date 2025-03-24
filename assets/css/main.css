@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-24 relative;
+  }
+  
+  .section-header {
+    @apply text-center mb-16;
+  }
+  
+  .section-subtitle {
+    @apply text-sm tracking-wider text-muted uppercase inline-block mb-3;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4;
+  }
+  
+  .btn {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-primary text-white hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-border hover:bg-card hover:-translate-y-1;
+  }
+
+  .card {
+    @apply bg-card rounded-lg border border-border p-6 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:border-primary hover:-translate-y-1 hover:shadow-hover;
+  }
+  
+  .badge {
+    @apply inline-block px-4 py-2 rounded-full text-sm bg-background-light text-muted;
+  }
+  
+  .divider {
+    @apply h-px w-4/5 mx-auto my-16 bg-border;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+}
